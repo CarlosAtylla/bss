@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>Parallax Template - Materialize</title>
+    <title>BSS - Seu site de serviços</title>
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
 <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">BSS</a>
+        <a id="logo-container" href="{{ url('/') }}" class="brand-logo">BSS</a>
         <ul class="right hide-on-med-and-down">
             @if (Auth::guest())
                 <li><a href="{{ url('/login') }}">Login</a></li>
@@ -55,19 +55,20 @@
                 </ul>
             </div>
             <div class="col l3 s12">
-                <h5 class="white-text">Connect</h5>
+                <h5 class="white-text">Destaques</h5>
                 <ul>
-                    <li><a class="white-text" href="#!">Link 1</a></li>
-                    <li><a class="white-text" href="#!">Link 2</a></li>
-                    <li><a class="white-text" href="#!">Link 3</a></li>
-                    <li><a class="white-text" href="#!">Link 4</a></li>
+                    <li><a class="white-text" href="#!">Técnico em Hardware</a></li>
+                    <li><a class="white-text" href="#!">Eletricista</a></li>
+                    <li><a class="white-text" href="#!">Bombeiro Hidraulico</a></li>
+                    <li><a class="white-text" href="#!">Técnico em Celulares</a></li>
+                    <li><a class="white-text" href="#!">Técnico Eletrônica</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            Estágio 2
+        Estágio 2 -  Só Aqui você encontra os melhores preços e serviços do Brasil. Venha Conferir!
         </div>
     </div>
 </footer>

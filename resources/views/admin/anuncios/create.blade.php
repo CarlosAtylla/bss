@@ -4,29 +4,44 @@
     <br><br>
     <div class="container">
         <h5>Adicionar anuncio</h5>
+            {!! Form::open(['url' => 'admin/anuncios', 'class' => 'form-horizontal']) !!}
         <div class="row">
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">Descrição do serviço</label>
+                        <input id="descricao" type="text" class="validate"  name="descricao">
+                        <label for="descricao">Descrição do serviç</label>
+                    </div>
+                </div>
+                <div class="row">
+                         <div class="input-field col s12">
+                            <select name="categoria">
+                            <option value="" disabled selected>Escolha</option>
+                            <option value="Técnico em Hardware">Técnico em Hardware</option>
+                            <option value="Eletricista">Eletricista</option>
+                            <option value="Bombeiro Hidraulico">Bombeiro Hidraulico</option>
+                            <option value="Técnico em Celulares" >Técnico em Celulares</option>
+                            <option value="Técnico Eletrônic">Técnico Eletrônica</option>
+                            <option value="Mecânica">Mecânica</option>
+                            <option value="Costura">Costura</option>
+
+                            </select>
+                            <label>Categoria</label>
+                          </div>     
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">categoria</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="preco" type="text" class="validate">
+                        <input id="preco" type="text" class="validate" name="preco">
                         <label for="preco">Preco</label>
                     </div>
                 </div>
                 <button class="btn">Salvar</button>
             </form>
         </div>
+            {!! Form::close() !!}
+
     </div>
 
 

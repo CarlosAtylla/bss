@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Create New Post</h1>
+    <h1>Criar post</h1>
     <hr/>
 
     {!! Form::open(['url' => 'admin/posts', 'class' => 'form-horizontal']) !!}

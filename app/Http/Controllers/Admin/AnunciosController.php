@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\User;
+use App\Post;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
@@ -20,9 +20,9 @@ class AnunciosController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(15);
+        $posts = Post::paginate(15);
 
-        return view('admin.anuncios.index', compact('users'));
+        return view('admin.anuncios.index', compact('posts'));
     }
 
     /**
@@ -42,13 +42,12 @@ class AnunciosController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['title' => 'required', 'body' => 'required', ]);
-
+        
         Post::create($request->all());
 
         Session::flash('flash_message', 'Post added!');
 
-        return redirect('admin/posts');
+        return redirect('admin/anuncios');
     }
 
     /**
